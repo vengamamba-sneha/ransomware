@@ -1,0 +1,21 @@
+rule RansomwareDetection
+{
+    strings:
+        // Common ransomware extensions
+        $ext1 = ".encrypted"
+        $ext2 = ".lock"
+        $ext3 = ".crypt"
+        $ext4 = ".locked"
+        $ext5 = ".ransom"
+        
+        // Common ransomware strings or keywords
+        $str1 = "Your files have been encrypted"
+        $str2 = "decrypt your files"
+        $str3 = "ransom payment"
+        $str4 = "Bitcoin"
+        $str5 = "TOR browser"
+
+    condition:
+        // Look for any of the extensions or strings
+        any of ($ext*) or any of ($str*)
+}
