@@ -1,0 +1,24 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.progress-box, .scanned-files-box, .detected-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    height: 200px;
+    overflow-y: auto;
+}
+
+#scan-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
+#progress-percentage {
+    font-size: 20px;
+    font-weight: bold;
+}
